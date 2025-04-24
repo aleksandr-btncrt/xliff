@@ -140,6 +140,7 @@
     "uglify-js": "3.17.4"
   },
   "scripts": {
+    "prepare": "npm run compile",
     "lint": "eslint .",
     "compile:esm": "rm -rf esm && mkdir esm && cross-env BABEL_ENV=esm babel lib -d esm",
     "compile:cjs": "rm -rf cjs && mkdir cjs && cross-env BABEL_ENV=cjs babel lib -d cjs && node -e \"console.log(JSON.stringify({type:'commonjs'}))\" > cjs/package.json",
